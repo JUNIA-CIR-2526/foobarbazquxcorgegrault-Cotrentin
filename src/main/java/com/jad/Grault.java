@@ -8,4 +8,7 @@ public abstract class Grault {
         this.foo = foo;
     }
 
+    public Foo getFoo() {
+        return this.foo;
+    }
 }
