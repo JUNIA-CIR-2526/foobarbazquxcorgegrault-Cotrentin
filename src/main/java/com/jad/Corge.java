@@ -14,7 +14,7 @@ public class Corge {
     public void setFoo(final Foo foo) {
         if (this.foo != null) this.foo.setCorge(this);
         this.foo = foo;
-        if (foo.getCorge() != this) foo.setCorge(this);
+        if ((foo != null) && (foo.getCorge() != this)) foo.setCorge(this);
     }
 
 }

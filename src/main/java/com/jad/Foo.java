@@ -35,7 +35,7 @@ public class Foo {
     public void setCorge(Corge corge) {
         if (this.corge != null) this.corge.setFoo(this);
         this.corge = corge;
-        if (corge.getFoo() != this) corge.setFoo(this);
+        if ((corge != null) && (corge.getFoo() != this)) corge.setFoo(this);
     }
 
     public void addBaz(Baz baz) {
