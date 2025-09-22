@@ -1,4 +1,4 @@
 package com.jad;
 
-public abstract class Qux {
+public class Qux {
 }

@@ -7,8 +7,8 @@ import java.util.List;
 public class Foo {
 
     private final Bar bar;
-    private final List<Baz> bazs = new ArrayList<>();
     private final List<Grault> graults = new ArrayList<>();
+    private List<Baz> bazs;
     private Qux qux;
     private Corge corge;
 
@@ -33,15 +33,17 @@ public class Foo {
     }
 
     public void setCorge(Corge corge) {
+        if (this.corge != null) this.corge.setFoo(this);
         this.corge = corge;
+        if (corge.getFoo() != this) corge.setFoo(this);
     }
 
     public void addBaz(Baz baz) {
         this.bazs.add(baz);
     }
 
-    public void addGrault(Grault grault) {
-        this.graults.add(grault);
+    public void addGrault() {
+        this.graults.add(new Grault(this));
     }
 
     public List<Grault> getGraults() {

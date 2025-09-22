@@ -1,8 +1,8 @@
 package com.jad;
 
-public abstract class Grault {
+public class Grault {
 
-    private final Foo foo;
+    private Foo foo;
 
     public Grault(Foo foo) {
         this.foo = foo;

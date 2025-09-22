@@ -1,4 +1,4 @@
 package com.jad;
 
-public abstract class Baz {
+public class Baz {
 }
